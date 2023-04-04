@@ -6,14 +6,29 @@
 //
 
 import SwiftUI
+import WeatherKit
 
 struct ContentView: View {
+    
+    let weatherService = WeatherService.shared
+    
+    @StateObject var locationManager = LocationManager()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+        }.task(id: locationManager.currentLocation) {
+            do {
+                if let location = locationManager.currentLocation {
+                    let weather = try await weatherService.weather(for: location)
+                    print(weather)
+                }
+            } catch {
+                print("Error getting weather: \(error)")
+            }
         }
         .padding()
     }

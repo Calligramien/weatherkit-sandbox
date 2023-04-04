@@ -11,6 +11,7 @@
 		A92C9B0229DC7F6300E55338 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C9B0129DC7F6300E55338 /* ContentView.swift */; };
 		A92C9B0429DC7F6400E55338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92C9B0329DC7F6400E55338 /* Assets.xcassets */; };
 		A92C9B0729DC7F6400E55338 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92C9B0629DC7F6400E55338 /* Preview Assets.xcassets */; };
+		A92C9B0F29DC7FE900E55338 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C9B0E29DC7FE900E55338 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,9 @@
 		A92C9B0129DC7F6300E55338 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A92C9B0329DC7F6400E55338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A92C9B0629DC7F6400E55338 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A92C9B0E29DC7FE900E55338 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A92C9B1029DC822D00E55338 /* Weatherkit-Sandbox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Weatherkit-Sandbox-Info.plist"; sourceTree = SOURCE_ROOT; };
+		A92C9B1129DC864200E55338 /* Weatherkit Sandbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weatherkit Sandbox.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,9 @@
 		A92C9AFE29DC7F6300E55338 /* Weatherkit Sandbox */ = {
 			isa = PBXGroup;
 			children = (
+				A92C9B1129DC864200E55338 /* Weatherkit Sandbox.entitlements */,
+				A92C9B1029DC822D00E55338 /* Weatherkit-Sandbox-Info.plist */,
+				A92C9B0D29DC7FD400E55338 /* Manager */,
 				A92C9AFF29DC7F6300E55338 /* Weatherkit_SandboxApp.swift */,
 				A92C9B0129DC7F6300E55338 /* ContentView.swift */,
 				A92C9B0329DC7F6400E55338 /* Assets.xcassets */,
@@ -65,6 +72,14 @@
 				A92C9B0629DC7F6400E55338 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A92C9B0D29DC7FD400E55338 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A92C9B0E29DC7FE900E55338 /* LocationManager.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +154,7 @@
 			files = (
 				A92C9B0229DC7F6300E55338 /* ContentView.swift in Sources */,
 				A92C9B0029DC7F6300E55338 /* Weatherkit_SandboxApp.swift in Sources */,
+				A92C9B0F29DC7FE900E55338 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,12 +280,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Weatherkit Sandbox/Weatherkit Sandbox.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weatherkit Sandbox/Preview Content\"";
 				DEVELOPMENT_TEAM = BUR8WU2V7M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Weatherkit-Sandbox-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WeatherApp requires your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WeatherApp requires your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -293,12 +313,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Weatherkit Sandbox/Weatherkit Sandbox.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Weatherkit Sandbox/Preview Content\"";
 				DEVELOPMENT_TEAM = BUR8WU2V7M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Weatherkit-Sandbox-Info.plist";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "WeatherApp requires your location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "WeatherApp requires your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
