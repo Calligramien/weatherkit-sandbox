@@ -12,6 +12,8 @@
 		A92C9B0429DC7F6400E55338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92C9B0329DC7F6400E55338 /* Assets.xcassets */; };
 		A92C9B0729DC7F6400E55338 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A92C9B0629DC7F6400E55338 /* Preview Assets.xcassets */; };
 		A92C9B0F29DC7FE900E55338 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C9B0E29DC7FE900E55338 /* LocationManager.swift */; };
+		A92C9B1429DC9DC000E55338 /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C9B1329DC9DC000E55338 /* HourlyForecastView.swift */; };
+		A978557F29DD705100F41F7D /* WeatherDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A978557E29DD705100F41F7D /* WeatherDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		A92C9B0E29DC7FE900E55338 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		A92C9B1029DC822D00E55338 /* Weatherkit-Sandbox-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Weatherkit-Sandbox-Info.plist"; sourceTree = SOURCE_ROOT; };
 		A92C9B1129DC864200E55338 /* Weatherkit Sandbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Weatherkit Sandbox.entitlements"; sourceTree = "<group>"; };
+		A92C9B1329DC9DC000E55338 /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
+		A978557E29DD705100F41F7D /* WeatherDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 		A92C9AFE29DC7F6300E55338 /* Weatherkit Sandbox */ = {
 			isa = PBXGroup;
 			children = (
-				A92C9B1129DC864200E55338 /* Weatherkit Sandbox.entitlements */,
-				A92C9B1029DC822D00E55338 /* Weatherkit-Sandbox-Info.plist */,
-				A92C9B0D29DC7FD400E55338 /* Manager */,
 				A92C9AFF29DC7F6300E55338 /* Weatherkit_SandboxApp.swift */,
 				A92C9B0129DC7F6300E55338 /* ContentView.swift */,
+				A92C9B1229DC9D9E00E55338 /* Components */,
+				A978557D29DD703E00F41F7D /* Helper */,
+				A92C9B0D29DC7FD400E55338 /* Manager */,
+				A92C9B1029DC822D00E55338 /* Weatherkit-Sandbox-Info.plist */,
+				A92C9B1129DC864200E55338 /* Weatherkit Sandbox.entitlements */,
 				A92C9B0329DC7F6400E55338 /* Assets.xcassets */,
 				A92C9B0529DC7F6400E55338 /* Preview Content */,
 			);
@@ -80,6 +86,22 @@
 				A92C9B0E29DC7FE900E55338 /* LocationManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		A92C9B1229DC9D9E00E55338 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A92C9B1329DC9DC000E55338 /* HourlyForecastView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A978557D29DD703E00F41F7D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A978557E29DD705100F41F7D /* WeatherDataHelper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A92C9B1429DC9DC000E55338 /* HourlyForecastView.swift in Sources */,
 				A92C9B0229DC7F6300E55338 /* ContentView.swift in Sources */,
+				A978557F29DD705100F41F7D /* WeatherDataHelper.swift in Sources */,
 				A92C9B0029DC7F6300E55338 /* Weatherkit_SandboxApp.swift in Sources */,
 				A92C9B0F29DC7FE900E55338 /* LocationManager.swift in Sources */,
 			);
